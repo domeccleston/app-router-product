@@ -1,0 +1,4 @@
+- Look at Next.js commerce product page for example [x]
+- Look at an example production product page, say Asos or Amazon [x]
+- Port over Delba's code from App Router  playground [x]
+- Fix layout colour 
