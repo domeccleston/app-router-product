@@ -1,4 +1,4 @@
-import { Product } from "../../../types";
+import { Product } from "../../types";
 import { ProductBestSeller } from "./product-best-seller";
 import { ProductEstimatedArrival } from "./product-estimated-arrival";
 import { ProductLowStockWarning } from "./product-low-stock-warning";

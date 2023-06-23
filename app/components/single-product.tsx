@@ -1,5 +1,5 @@
 import { Pricing } from "./pricing";
-import type { Product } from "../../../types";
+import type { Product } from "../../types";
 import { ProductRating } from "./product-rating";
 import { cookies } from "next/headers";
 import Image from "next/image";

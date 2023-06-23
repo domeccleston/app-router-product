@@ -1,4 +1,4 @@
-import { Product } from "../../../types";
+import { Product } from "../../types";
 import { ProductCurrencySymbol } from "./product-currency-symbol";
 import { ProductDeal } from "./product-deal";
 import { ProductLighteningDeal } from "./product-lightening-deal";

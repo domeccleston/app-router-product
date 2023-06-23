@@ -1,4 +1,4 @@
-import type { Review } from "../../../types";
+import type { Review } from "../../types";
 import { ProductReviewCard } from "./product-review-card";
 
 export async function Reviews({ data }: { data: Promise<Response> }) {

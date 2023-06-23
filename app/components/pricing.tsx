@@ -1,5 +1,5 @@
-import type { Product } from "../../../types";
-import { Ping } from "../ui";
+import type { Product } from "../../types";
+import { Ping } from "../../ui";
 import { ProductEstimatedArrival } from "./product-estimated-arrival";
 import { ProductLowStockWarning } from "./product-low-stock-warning";
 import { ProductPrice } from "./product-price";

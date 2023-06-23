@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import "./globals.css";
+import "@/public/globals.css";
 
 export const metadata: Metadata = {
   title: {
@@ -9,31 +9,6 @@ export const metadata: Metadata = {
   description:
     "A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.",
 };
-
-/* 
-import { TabGroup } from '#/ui/tab-group';
-import React from 'react';
-
-export const metadata = {
-  title: 'Streaming',
-};
-
-export default async function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="space-y-9">
-      <div className="flex justify-between">
-      </div>
-
-      <div>{children}</div>
-    </div>
-  );
-}
-
-*/
 
 export default function RootLayout({
   children,
