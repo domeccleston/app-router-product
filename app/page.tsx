@@ -17,6 +17,7 @@ import { CartCountProvider } from "./components/cart-count-context";
 export const runtime = "edge";
 
 export default async function Page() {
+  console.log({ url: getBaseUrl() });
   const cartCount = Number(cookies().get("_cart_count")?.value || "0");
   return (
     <CartCountProvider initialCartCount={cartCount}>
