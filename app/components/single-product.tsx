@@ -4,7 +4,7 @@ import { ProductRating } from "./product-rating";
 import { cookies } from "next/headers";
 import Image from "next/image";
 
-export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
+export const  SingleProduct = async ({ data }: { data: Promise<Response> }) => {
   const product = (await data.then((res) => res.json())) as Product;
 
   // Get the cart count from the users cookies and pass it to the client

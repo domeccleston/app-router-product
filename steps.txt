@@ -9,4 +9,6 @@
 - Port over Delba's code from App Router  playground [x]
 - Fix layout colour [x]
 - Move page to top level [x]
-- Clean up files [ ]
+- Clean up files [x]
+- Walk through code and understand data fetching [ ]
+- Add cart back in [ ]
