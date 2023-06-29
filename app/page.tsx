@@ -39,7 +39,7 @@ export default async function Page() {
           <RecommendedProducts
             path="/streaming/edge/product"
             data={fetch(`${getBaseUrl()}/api/products?delay=500&filter=1`, {
-              cache: "no-store",
+              cache: "force-cache",
             })}
           />
         </Suspense>
