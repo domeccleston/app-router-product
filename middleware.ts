@@ -10,5 +10,7 @@ export async function middleware(req: NextRequest) {
 
   console.log({ geo });
 
+
+  
   return NextResponse.rewrite(url);
 }
