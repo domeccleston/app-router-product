@@ -51,7 +51,7 @@ const data: Product[] = [
   {
     id: "1",
     stock: 2,
-    rating: 5,
+    rating: 4,
     name: "Polaroid camera",
     description:
       "Morbi eu ullamcorper urna, a condimentum massa. In fermentum ante non turpis cursus fringilla. Praesent neque eros, gravida vel ante sed, vehicula elementum orci. Sed eu ipsum eget enim mattis mollis.",
