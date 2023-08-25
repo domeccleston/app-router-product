@@ -10,6 +10,8 @@ export async function middleware(req: NextRequest) {
 
   const city = geo?.city || "London";
 
+  console.log({ geo });
+
   const response = NextResponse.next();
 
   response.cookies.set("city", city);
