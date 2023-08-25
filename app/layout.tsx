@@ -15,7 +15,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(process.env.VERCEL_URL)
   return (
     <html lang="en" className="[color-scheme:dark]">
       <body className="bg-gray-1100 overflow-y-scroll bg-[url('/grid.svg')] pb-36">
