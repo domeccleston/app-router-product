@@ -1,4 +1,5 @@
-import { add, format, isTomorrow } from 'date-fns';
+import { add, format, isTomorrow } from "date-fns";
+import { cookies } from "next/headers";
 
 export const ProductEstimatedArrival = ({
   leadTime,
@@ -11,14 +12,19 @@ export const ProductEstimatedArrival = ({
     days: leadTime,
   });
 
+  const cookieStore = cookies();
+
+  const city = cookieStore.get("city")?.value;
+
   return (
     <div className="text-sm text-gray-300">
-      Get it{' '}
+      Get it{" "}
       <strong className="font-bold text-gray-100">
-        {isTomorrow(date) ? 'tomorrow, ' : null}
-        {format(date, 'MMM d')}
+        {isTomorrow(date) ? "tomorrow, " : null}
+        {format(date, "MMM d")}
       </strong>
       {hasDeliveryTime ? <> by 5pm</> : null}
+      <div className="mt-2 text-xs">Special offer for customers in {city}</div>
     </div>
   );
 };

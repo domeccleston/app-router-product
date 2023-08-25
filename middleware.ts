@@ -8,9 +8,11 @@ export const config = {
 export async function middleware(req: NextRequest) {
   const { nextUrl: url, geo } = req;
 
-  console.log({ geo });
+  const city = geo?.city || "London";
 
+  const response = NextResponse.next();
 
-  
-  return NextResponse.rewrite(url);
+  response.cookies.set("city", city);
+
+  return response;
 }

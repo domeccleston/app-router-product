@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 
 import { getBaseUrl } from "@/lib/getBaseUrl";
 
