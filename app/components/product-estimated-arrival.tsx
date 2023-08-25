@@ -14,7 +14,7 @@ export const ProductEstimatedArrival = ({
 
   const cookieStore = cookies();
 
-  const city = cookieStore.get("city")?.value;
+  const city = cookieStore.get("city")?.value || "London";
 
   return (
     <div className="text-sm text-gray-300">
