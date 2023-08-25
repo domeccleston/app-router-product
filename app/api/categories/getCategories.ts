@@ -1,4 +1,3 @@
-import { getBaseUrl } from "@/lib/getBaseUrl";
 import { notFound } from "next/navigation";
 import type { Category } from "./category";
 
@@ -7,6 +6,7 @@ import type { Category } from "./category";
 // doesn't currently use sensitive environment variables, it's
 // good practise to add `server-only` preemptively.
 import "server-only";
+import { getBaseUrl } from "@/lib/getBaseUrl";
 
 export async function getCategories({ parent }: { parent?: string } = {}) {
   const res = await fetch(

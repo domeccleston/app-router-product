@@ -17,7 +17,7 @@ import { CartCountProvider } from "./components/cart-count-context";
 export const runtime = "edge";
 
 export default async function Page() {
-  console.log({ url: process.env.VERCEL_URL });
+  console.log({ url: `${getBaseUrl()}/api/products?id=1` });
   const cartCount = Number(cookies().get("_cart_count")?.value || "0");
   return (
     <CartCountProvider initialCartCount={cartCount}>
@@ -39,7 +39,7 @@ export default async function Page() {
           <RecommendedProducts
             path="/streaming/edge/product"
             data={fetch(`${getBaseUrl()}/api/products?delay=500&filter=1`, {
-              cache: "force-cache",
+              cache: "no-store",
             })}
           />
         </Suspense>
