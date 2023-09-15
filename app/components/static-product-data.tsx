@@ -1,4 +1,4 @@
-export const ProductPricing = {
+export const StaticProductData = {
   id: "1",
   stock: 2,
   rating: 4,

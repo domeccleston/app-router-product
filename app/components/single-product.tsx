@@ -1,7 +1,7 @@
 import { Pricing } from "./pricing";
 import type { Product } from "../../types";
 import { ProductRating } from "./product-rating";
-import { ProductPricing } from "./product-pricing";
+import { StaticProductData } from "./static-product-data";
 import { cookies } from "next/headers";
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ export const SingleProduct = async () => {
       <div className="col-span-full lg:col-span-1">
         <div className="space-y-2">
           <Image
-            src={`/${product.image}`}
+            src={`/${StaticProductData.image}`}
             className="hidden rounded-lg grayscale lg:block"
             alt={product.title as string}
             height={400}
@@ -30,7 +30,7 @@ export const SingleProduct = async () => {
           <div className="flex gap-x-2">
             <div className="w-1/3">
               <Image
-                src={`/${product.image}`}
+                src={`/${StaticProductData.image}`}
                 className="rounded-lg grayscale"
                 alt={product.name}
                 height={180}
@@ -39,7 +39,7 @@ export const SingleProduct = async () => {
             </div>
             <div className="w-1/3">
               <Image
-                src={`/${product.image}`}
+                src={`/${StaticProductData.image}`}
                 className="rounded-lg grayscale"
                 alt={product.name}
                 height={180}
@@ -48,7 +48,7 @@ export const SingleProduct = async () => {
             </div>
             <div className="w-1/3">
               <Image
-                src={`/${product.image}`}
+                src={`/${StaticProductData.image}`}
                 className="rounded-lg grayscale"
                 alt={product.name}
                 height={180}
@@ -72,7 +72,7 @@ export const SingleProduct = async () => {
       </div>
 
       <div className="col-span-full lg:col-span-1">
-        <Pricing product={ProductPricing} cartCount={cartCount} />
+        <Pricing product={StaticProductData} cartCount={cartCount} />
       </div>
     </div>
   );
