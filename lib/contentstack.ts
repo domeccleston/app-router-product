@@ -9,10 +9,8 @@ const stackConfig: Config = {
 
 const contentStack = Stack(stackConfig);
 
-export function fetchProduct() {
-  const query = contentStack
-    .ContentType("app_router_product_page")
-    .Entry("bltf46c1e88de381cfa");
+export function fetchProductById(id: string) {
+  const query = contentStack.ContentType("app_router_product_page").Entry(id);
 
   return new Promise((resolve, reject) => {
     query.fetch().then(

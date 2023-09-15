@@ -22,9 +22,6 @@ export default async function Page() {
     <CartCountProvider initialCartCount={cartCount}>
       <div className="space-y-8 lg:space-y-14">
         <SingleProduct
-          data={fetch(
-            `https://app-router-product-six.vercel.app/api/products1`
-          )}
         />
         <div className="relative">
           <div className="absolute -left-4 top-2">
@@ -42,7 +39,7 @@ export default async function Page() {
           <RecommendedProducts
             path="/streaming/edge/product"
             data={fetch(`${getBaseUrl()}/api/products?delay=500&filter=1`, {
-              cache: "force-cache",
+              cache: "no-store",
             })}
           />
         </Suspense>

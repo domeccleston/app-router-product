@@ -5,7 +5,10 @@ import { ProductPricing } from "./product-pricing";
 import { cookies } from "next/headers";
 import Image from "next/image";
 
-export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
+export const SingleProduct = async () => {
+  const data = fetch(
+    `https://app-router-product-six.vercel.app/api/contentstack`
+  );
   const product = (await data.then((res) => res.json())) as Product;
 
   // Get the cart count from the users cookies and pass it to the client
