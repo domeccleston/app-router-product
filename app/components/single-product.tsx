@@ -64,7 +64,7 @@ export const SingleProduct = async () => {
           {product.title}
         </div>
 
-        <ProductRating rating={Number(product.rating)} />
+        <ProductRating rating={StaticProductData.rating} />
 
         <div className="space-y-4 text-sm text-gray-200">
           <p>{product.product_description}</p>
