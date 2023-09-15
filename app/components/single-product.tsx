@@ -20,6 +20,7 @@ export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
           <Image
             src={`/${product.image}`}
             className="hidden rounded-lg grayscale lg:block"
+            //@ts-ignore
             alt={product.title}
             height={400}
             width={400}
@@ -59,12 +60,14 @@ export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
 
       <div className="col-span-full space-y-4 lg:col-span-2">
         <div className="truncate text-xl font-medium text-white lg:text-2xl">
+          {/* @ts-ignore */}
           {product.title}
         </div>
 
         <ProductRating rating={Number(product.rating)} />
 
         <div className="space-y-4 text-sm text-gray-200">
+          {/* @ts-ignore */}
           <p>{product.product_description}</p>
         </div>
       </div>
