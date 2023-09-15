@@ -7,6 +7,8 @@ import Image from "next/image";
 export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
   const product = (await data.then((res) => res.json())) as Product;
 
+  console.log(product);
+
   // Get the cart count from the users cookies and pass it to the client
   // AddToCart component
   const cartCount = cookies().get("_cart_count")?.value || "0";
@@ -18,7 +20,7 @@ export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
           <Image
             src={`/${product.image}`}
             className="hidden rounded-lg grayscale lg:block"
-            alt={product.name}
+            alt={product.title}
             height={400}
             width={400}
           />
@@ -57,19 +59,18 @@ export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
 
       <div className="col-span-full space-y-4 lg:col-span-2">
         <div className="truncate text-xl font-medium text-white lg:text-2xl">
-          {product.name}
+          {product.title}
         </div>
 
-        <ProductRating rating={product.rating} />
+        <ProductRating rating={Number(product.rating)} />
 
         <div className="space-y-4 text-sm text-gray-200">
-          <p>{product.description}</p>
-          <p>{product.description}</p>
+          <p>{product.product_description}</p>
         </div>
       </div>
 
       <div className="col-span-full lg:col-span-1">
-        <Pricing product={product} cartCount={cartCount} />
+        {/* <Pricing product={product} cartCount={cartCount} /> */}
       </div>
     </div>
   );

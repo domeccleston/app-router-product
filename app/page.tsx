@@ -21,7 +21,11 @@ export default async function Page() {
   return (
     <CartCountProvider initialCartCount={cartCount}>
       <div className="space-y-8 lg:space-y-14">
-        <SingleProduct data={fetch(`${getBaseUrl()}/api/products?id=1`)} />
+        <SingleProduct
+          data={fetch(
+            `https://app-router-product-six.vercel.app/api/products1`
+          )}
+        />
         <div className="relative">
           <div className="absolute -left-4 top-2">
             <Ping />
