@@ -1,4 +1,6 @@
 export type Product = {
+  title?: string;
+  product_description?: string;
   id: string;
   stock: number;
   rating: number;
