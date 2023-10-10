@@ -13,16 +13,15 @@ import { Reviews, ReviewsSkeleton } from "./components/reviews";
 import { SingleProduct } from "./components/single-product";
 import { CartCountProvider } from "./components/cart-count-context";
 
-// Render this page at the edge, close to the user
 export const runtime = "edge";
 
 export default async function Page() {
+  console.log("logging from page");
   const cartCount = Number(cookies().get("_cart_count")?.value || "0");
   return (
     <CartCountProvider initialCartCount={cartCount}>
       <div className="space-y-8 lg:space-y-14">
-        <SingleProduct
-        />
+        <SingleProduct />
         <div className="relative">
           <div className="absolute -left-4 top-2">
             <Ping />
@@ -39,7 +38,7 @@ export default async function Page() {
           <RecommendedProducts
             path="/streaming/edge/product"
             data={fetch(`${getBaseUrl()}/api/products?delay=500&filter=1`, {
-              cache: "no-store",
+              cache: "force-cache",
             })}
           />
         </Suspense>
