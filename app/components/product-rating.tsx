@@ -4,7 +4,6 @@ import { StarIcon } from "@heroicons/react/solid";
 import clsx from "clsx";
 
 export const ProductRating = ({ rating }: { rating: number }) => {
-  console.log("logging from client");
 
   return (
     <div className="flex gap-x-1">
